@@ -1,0 +1,224 @@
+.filters {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-sm);
+}
+
+.filterGroup {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.filterLabel {
+    font-size: .85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    min-width: 60px;
+}
+
+.filterBtns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filterBtn {
+    padding: 6px 14px;
+    border-radius: 100px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    font-size: .85rem;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: inherit;
+}
+
+.filterBtn:hover {
+    border-color: var(--border-default);
+    color: var(--text-primary);
+}
+
+.filterBtn.filterActive {
+    background: var(--primary-pale);
+    border-color: var(--border-default);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.resultCount {
+    font-size: .9rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.card:hover {
+    border-color: var(--border-default);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+.cardTop {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.avatar {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    border: 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.info {
+    flex: 1;
+}
+
+.name {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.spec {
+    font-size: .85rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.countryTag {
+    font-size: .8rem;
+    color: var(--text-muted);
+}
+
+.badge {
+    font-size: .72rem;
+    padding: 3px 10px;
+    border-radius: 100px;
+    background: var(--primary-pale);
+    border: 1px solid var(--border-default);
+    color: var(--primary);
+    font-weight: 700;
+    white-space: nowrap;
+    height: fit-content;
+}
+
+.meta {
+    display: flex;
+    gap: 16px;
+    font-size: .85rem;
+    color: var(--text-secondary);
+    flex-wrap: wrap;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tag {
+    padding: 3px 10px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-subtle);
+    border-radius: 100px;
+    font-size: .77rem;
+    color: var(--text-secondary);
+}
+
+.cardFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-subtle);
+    margin-top: auto;
+}
+
+.priceLabel {
+    font-size: .78rem;
+    color: var(--text-muted);
+    margin-bottom: 3px;
+}
+
+.price {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.bookBtn {
+    background: var(--primary);
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: var(--radius-xs);
+    font-weight: 700;
+    font-size: .9rem;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    font-family: inherit;
+}
+
+.bookBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-primary);
+    background: var(--primary-dark);
+}
+
+.bookedMsg {
+    font-size: .85rem;
+    color: var(--green);
+    font-weight: 600;
+    padding: 8px 12px;
+    background: rgba(46, 139, 87, .06);
+    border: 1px solid rgba(46, 139, 87, .18);
+    border-radius: var(--radius-xs);
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

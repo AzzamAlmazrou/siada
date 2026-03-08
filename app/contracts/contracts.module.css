@@ -1,0 +1,370 @@
+.formCard {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 60px;
+    border: none;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.06);
+    background: var(--bg-white);
+    color: var(--text-primary);
+}
+
+.formHeader {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.formHeader h2 {
+    font-size: 2rem;
+    color: var(--brand-ink);
+    margin-bottom: 12px;
+}
+
+.formHeader p {
+    color: var(--text-muted);
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.divider {
+    grid-column: span 2;
+    padding: 20px 0;
+    margin-top: 20px;
+    border-bottom: 2px solid var(--border);
+    font-weight: 800;
+    color: var(--brand-ink);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+.fullWidth {
+    grid-column: span 2;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.inputGroup label {
+    font-weight: 800;
+    font-size: 0.95rem;
+    color: var(--brand-ink);
+}
+
+.input,
+.textarea {
+    padding: 16px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--bg-paper);
+    font-family: inherit;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    transition: var(--transition);
+}
+
+.input:focus,
+.textarea:focus {
+    outline: none;
+    border-color: var(--brand-ink);
+    background: var(--bg-white);
+}
+
+.formFooterAction {
+    margin-top: 60px;
+    text-align: center;
+}
+
+/* ── Premium Document Style ── */
+
+.previewView {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.premiumDocument {
+    background: #ffffff;
+    padding: 0;
+    box-shadow: var(--shadow-lg);
+    border: none;
+    position: relative;
+    overflow: hidden;
+    color: #111;
+    /* دائما نص أسود */
+}
+
+.docWatermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    font-size: 15rem;
+    opacity: 0.03;
+    pointer-events: none;
+    user-select: none;
+    color: var(--brand-ink);
+    z-index: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.docBorder {
+    border: 30px solid transparent;
+    border-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20H80V80H20V20Z' stroke='%234A5561' stroke-width='0.5'/%3E%3Cpath d='M10 10H90V90H10V10Z' stroke='%234A5561' stroke-width='0.2'/%3E%3C/svg%3E") 30 stretch;
+    padding: 60px 80px;
+    min-height: 1400px;
+    position: relative;
+    background: #ffffff;
+    z-index: 1;
+    color: #111;
+}
+
+.docInner {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.premiumHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.govStyling {
+    text-align: left;
+    font-size: 0.75rem;
+    color: #444;
+    line-height: 1.4;
+}
+
+.docSeal {
+    font-size: 3.5rem;
+    filter: grayscale(1) contrast(1.2);
+}
+
+.docTitleBlock {
+    text-align: center;
+    flex: 1;
+}
+
+.docTitleBlock h2 {
+    font-size: 2.4rem;
+    margin-bottom: 8px;
+    color: #000;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.docMeta {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    font-size: 0.8rem;
+    color: #555;
+    font-weight: 600;
+}
+
+.docBodyContent {
+    line-height: 2.2;
+    font-size: 1.15rem;
+    color: #111;
+    text-align: justify;
+}
+
+.legalSection {
+    margin-top: 48px;
+    page-break-inside: avoid;
+}
+
+.legalSection h4 {
+    font-weight: 900;
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.legalSection h4::before {
+    display: none;
+}
+
+.premiumSignatures {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.signatureCol {
+    flex: 1;
+    padding: 30px;
+    border: 1px dashed #ddd;
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+}
+
+.officialStamp {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    border: 3px double #d1d5db;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+    color: #9ca3af;
+    transform: rotate(15deg);
+    opacity: 0.5;
+}
+
+.premiumFooter {
+    margin-top: 100px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    color: #888;
+}
+
+.qrPlaceholder {
+    background: #fcfcfc;
+    border: 1px solid #eee;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+
+@media print {
+    .previewView {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .toolbar {
+        display: none !important;
+    }
+
+    .premiumDocument {
+        box-shadow: none !important;
+        border: none !important;
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        overflow: visible !important;
+        background: white !important;
+    }
+
+    .docBorder {
+        border-width: 6px !important;
+        padding: 50px 40px !important;
+        min-height: 100vh !important;
+        height: auto !important;
+        box-sizing: border-box !important;
+    }
+
+    .docInner {
+        max-width: 100% !important;
+    }
+
+    .premiumHeader {
+        margin-bottom: 5px !important;
+        padding-bottom: 5px !important;
+    }
+
+    .docTitleBlock h2 {
+        font-size: 1.4rem !important;
+        margin-bottom: 0 !important;
+    }
+
+    .docBodyContent {
+        line-height: 1.3 !important;
+        font-size: 0.80rem !important;
+    }
+
+    .legalSection {
+        margin-top: 10px !important;
+    }
+
+    .legalSection h4 {
+        font-size: 0.95rem !important;
+        margin-bottom: 4px !important;
+    }
+
+    .premiumSignatures {
+        margin-top: 40px !important;
+    }
+
+    .signatureCol {
+        padding: 15px !important;
+    }
+
+    .signatureCol p {
+        margin-bottom: 40px !important;
+    }
+
+    .premiumFooter {
+        margin-top: 40px !important;
+        position: absolute;
+        bottom: 50px;
+        left: 80px;
+        right: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .formCard {
+        padding: 32px 20px;
+    }
+
+    .premiumHeader {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .premiumSignatures {
+        grid-template-columns: 1fr;
+    }
+
+    .docBorder {
+        padding: 40px 20px;
+    }
+}

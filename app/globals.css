@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  /* ── Modern Premium Palette ── */
+  --brand-ink: #4A5561;
+  /* Deep Blue-Gray */
+  --bg-paper: #F0F0EB;
+  /* Aged Paper / Warm White */
+  --bg-white: #FFFFFF;
+
+  /* ── Functional ── */
+  --primary: var(--brand-ink);
+  --primary-light: #64748B;
+  --primary-pale: rgba(74, 85, 97, 0.05);
+
+  /* ── Accent ── */
+  --accent: #2C3E50;
+  --emerald: #34495E;
+  /* Muted Professional Slate */
+  --border: rgba(74, 85, 97, 0.12);
+  --border-dark: rgba(74, 85, 97, 0.25);
+
+  /* ── Text ── */
+  --text-primary: #1A202C;
+  --text-secondary: #4A5568;
+  --text-muted: #718096;
+
+  /* ── Layout ── */
+  --navbar-height: 80px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+
+  /* ── Shadows (Softer & More Modern) ── */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 20px 40px rgba(74, 85, 97, 0.08);
+
+  /* ── Misc ── */
+  --transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark {
+  --brand-ink: #A0AEC0;
+  --bg-paper: #0F172A;
+  /* كحلي فاخر بدلاً من الأسود */
+  --bg-white: #1E293B;
+  /* رمادي أزرق مريح */
+  --text-primary: #F0F9FF;
+  /* أبيض زرقي ناصع */
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-dark: rgba(255, 255, 255, 0.15);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Almarai', sans-serif;
+  background: var(--bg-paper);
+  color: var(--text-primary);
+  line-height: 1.8;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.serif-title {
+  font-family: 'Amiri', serif;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-paper);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brand-ink);
+  border-radius: 10px;
+}
+
+/* ── Container ── */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ── UI Elements ── */
+.card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 40px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-dark);
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--brand-ink);
+  color: #FFF;
+  padding: 16px 32px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(74, 85, 97, 0.2);
+}
+
+.btn-primary:hover {
+  background: #34495E;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74, 85, 97, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--brand-ink);
+  padding: 15px 32px;
+  border: 2px solid var(--brand-ink);
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  transition: var(--transition);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-secondary:hover {
+  background: var(--brand-ink);
+  color: #FFF;
+  transform: translateY(-2px);
+}
+
+/* ── Sections ── */
+.page-section {
+  padding: 120px 0;
+}
+
+.section-title {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: var(--brand-ink);
+  letter-spacing: -1px;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin-bottom: 56px;
+  line-height: 1.8;
+}
+
+/* ── Badge ── */
+.badge {
+  display: inline-flex;
+  padding: 8px 20px;
+  background: var(--bg-white);
+  color: var(--brand-ink);
+  border: 1px solid var(--border-dark);
+  font-size: 0.85rem;
+  font-weight: 800;
+  border-radius: 100px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .page-section {
+    padding: 80px 0;
+  }
+}
+
+/* ── Global Print Utilities ── */
+@media print {
+
+  nav,
+  footer,
+  .no-print,
+  [class*="Navbar_navbar"] {
+    display: none !important;
+  }
+
+  .page-section {
+    padding: 0 !important;
+  }
+
+  body {
+    background: white !important;
+  }
+}
+
+@page {
+  size: A4 portrait;
+  margin: 1cm;
+}

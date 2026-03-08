@@ -1,0 +1,156 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.inputGrp label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 800;
+    color: var(--brand-ink);
+}
+
+.input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid var(--border-dark);
+    background: var(--bg-paper);
+    border-radius: var(--radius-sm);
+    font-size: 1.1rem;
+    color: var(--brand-ink);
+}
+
+.heirsControlGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.heirControlRow {
+    background: var(--bg-paper);
+    padding: 16px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--border);
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.counter button {
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--brand-ink);
+    background: var(--bg-white);
+    color: var(--brand-ink);
+    border-radius: 4px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.counter input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    background: transparent;
+    font-weight: 800;
+    color: var(--brand-ink);
+    font-size: 1rem;
+}
+
+.resultCard {
+    border-left: 6px solid var(--brand-ink);
+}
+
+.govResult {
+    border-left-color: #E53E3E;
+    background: #FFF5F5 !important;
+}
+
+.resultHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.totalBadge {
+    padding: 8px 16px;
+    background: var(--brand-ink);
+    color: white;
+    border-radius: 6px;
+    font-weight: 800;
+}
+
+.summary {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 32px;
+}
+
+.sharesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.shareRow {
+    padding: 20px;
+    background: var(--bg-paper);
+    border-radius: var(--radius-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shareMain {
+    display: flex;
+    flex-direction: column;
+}
+
+.shareMain span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.shareVal {
+    font-weight: 800;
+    color: var(--brand-ink);
+}
+
+.placeholder {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed var(--border-dark);
+    border-radius: var(--radius-md);
+    color: var(--text-muted);
+    text-align: center;
+    padding: 40px;
+}
+
+.placeholderIcon {
+    font-size: 4rem;
+    margin-bottom: 24px;
+    opacity: 0.3;
+}
+
+@media (max-width: 1100px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .heirsControlGrid {
+        grid-template-columns: 1fr;
+    }
+}

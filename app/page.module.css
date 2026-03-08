@@ -1,0 +1,70 @@
+.hero {
+    padding: 140px 0 100px;
+}
+
+.heroBrandName {
+    font-size: clamp(3rem, 12vw, 6.5rem);
+    font-family: var(--font-serif);
+    color: var(--brand-ink);
+    margin-bottom: 10px;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    font-weight: 800;
+}
+
+.heroSubtitle {
+    font-size: clamp(1.5rem, 5vw, 2.8rem);
+    margin-bottom: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.heroSub {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto 48px;
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+}
+
+.serviceCard {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon {
+    font-size: 4.5rem;
+    margin-bottom: 24px;
+}
+
+.sTitle {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.sDesc {
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+.sLink {
+    font-weight: 700;
+    color: var(--brand-ink);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+}

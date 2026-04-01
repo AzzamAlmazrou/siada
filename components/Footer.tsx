@@ -15,18 +15,17 @@ export default function Footer() {
                     <div className={styles.linksGrid}>
                         <div className={styles.linkCol}>
                             <h4>الخدمات الذكية</h4>
-                            <Link href="/contracts">مركز العقود</Link>
-                            <Link href="/advisor">المستشار الذكي</Link>
-                            <Link href="/inheritance">حساب المواريث</Link>
+                            <Link href="/contracts" className={styles.footerBrandLink}>مركز العقود</Link>
+                            <Link href="/advisor" className={styles.footerBrandLink}>المستشار الذكي</Link>
+                            <Link href="/inheritance" className={styles.footerBrandLink}>حساب المواريث</Link>
                         </div>
                         <div className={styles.linkCol}>
                             <h4>المجتمع</h4>
-                            <Link href="/lawyers">دليل الخبراء</Link>
-                            <Link href="#">الأسئلة الشائعة</Link>
-                            <Link href="#">اتصل بنا</Link>
+                            <Link href="/lawyers" className={styles.footerBrandLink}>دليل الخبراء</Link>
                         </div>
                         <div className={styles.linkCol}>
                             <h4>المنصة</h4>
+                            <Link href="/about" className={styles.footerBrandLink}>عن سيادة</Link>
                             <Link href="/terms" className={styles.footerBrandLink}>سياسة الخصوصية</Link>
                             <Link href="/terms" className={styles.footerBrandLink}>الشروط والأحكام</Link>
                         </div>

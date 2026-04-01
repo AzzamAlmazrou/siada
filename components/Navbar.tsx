@@ -22,6 +22,12 @@ export default function Navbar() {
                     <span className={styles.bracket}>]</span>
                 </Link>
 
+                {/* Overlay Background for Sidebar */}
+                <div 
+                    className={`${styles.menuOverlay} ${isOpen ? styles.activeOverlay : ''}`} 
+                    onClick={() => setIsOpen(false)}
+                />
+
                 <div className={`${styles.links} ${isOpen ? styles.active : ''}`}>
                     <Link href="/" onClick={() => setIsOpen(false)}>الرئيسية</Link>
                     <Link href="/contracts" onClick={() => setIsOpen(false)}>مولد العقود</Link>

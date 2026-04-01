@@ -25,9 +25,10 @@
 
 .formGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
 }
+
 
 .divider {
     grid-column: span 2;
@@ -53,6 +54,7 @@
     grid-column: span 2;
 }
 
+
 .inputGroup {
     display: flex;
     flex-direction: column;
@@ -66,7 +68,9 @@
 }
 
 .input,
-.textarea {
+.textarea,
+.select {
+    width: 100%;
     padding: 16px;
     border: 2px solid var(--border);
     border-radius: var(--radius-md);
@@ -75,10 +79,12 @@
     font-size: 1.1rem;
     color: var(--text-primary);
     transition: var(--transition);
+    box-sizing: border-box;
 }
 
 .input:focus,
-.textarea:focus {
+.textarea:focus,
+.select:focus {
     outline: none;
     border-color: var(--brand-ink);
     background: var(--bg-white);
@@ -347,24 +353,79 @@
 
 @media (max-width: 768px) {
     .formGrid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .divider {
+        grid-column: span 1 !important;
+    }
+
+    .fullWidth {
+        grid-column: span 1 !important;
     }
 
     .formCard {
-        padding: 32px 20px;
+        padding: 24px 16px;
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .formHeader {
+        margin-bottom: 32px;
+    }
+
+    .formHeader h2 {
+        font-size: 1.4rem;
+    }
+
+    .divider {
+        grid-column: span 1;
+        font-size: 1rem;
     }
 
     .premiumHeader {
         flex-direction: column;
         text-align: center;
-        gap: 20px;
+        gap: 16px;
     }
 
     .premiumSignatures {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        gap: 20px;
     }
 
     .docBorder {
-        padding: 40px 20px;
+        padding: 24px 16px;
+        border-width: 8px;
+    }
+
+    .docTitleBlock h2 {
+        font-size: 1.5rem;
+    }
+
+    .docMeta {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .docBodyContent {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+
+    .toolbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .input,
+    .textarea {
+        font-size: 1rem;
     }
 }

@@ -7,7 +7,7 @@ const services = [
     { title: 'مولد العقود', desc: 'إصدار وتوليد عقود قانونية ذكية متوافقة مع الأنظمة السعودية الحديثة.', icon: '📜', path: '/contracts' },
     { title: 'المستشار صقر', desc: 'إجابات فورية لاستفساراتك القانونية بدقة عالية وخارج الأوقات الرسمية.', icon: '⚖️', path: '/advisor' },
     { title: 'حاسبة الورث', desc: 'حساب الأنصبة الشرعية والتركات بدقة متناهية تحت إشراف شرعي وقانوني.', icon: '🧮', path: '/inheritance' },
-    { title: 'نخبة المحامين', desc: 'تواصل مباشر مع نخبة من المحامين والمستشارين المعتمدين لدى وزارة العدل.', icon: '👨‍⚖️', path: '/lawyers' },
+    { title: 'نخبة المحامين', desc: 'تواصل مباشر مع نخبة من المحامين والمستشارين المعتمدين في المملكة العربية السعودية.', icon: '👨‍⚖️', path: '/lawyers' },
 ]
 
 export default function Home() {
@@ -23,7 +23,6 @@ export default function Home() {
                         style={{ marginBottom: '40px' }}
                     >
                         <h1 className={styles.heroBrandName}>سِيادَة</h1>
-                        <div className="badge">التحول الرقمي لخدمات العدالة</div>
                     </motion.div>
 
                     <motion.div
@@ -31,19 +30,20 @@ export default function Home() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.3 }}
                     >
-                        <h2 className={styles.heroSubtitle}>خدمات قانونية ذكية بمعايير عالمية</h2>
+                        <h2 className={styles.heroSubtitle}>أمانك القانوني، برؤية تقنية حديثة</h2>
                         <p className={styles.heroSub}>منصة رائدة تمكّنك من إدارة شؤونك القانونية بذكاء، سرعة، وموثوقية تامة، بعيداً عن التعقيدات التقليدية، وفق أحدث الأنظمة السعودية.</p>
 
                         <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
                             <Link href="/contracts" className="btn-primary">ابدأ تجربتك المجانية</Link>
-                            <Link href="/advisor" className="btn-secondary">تواصل مع المستشار صقر</Link>
+                            <Link href="/about" className="btn-secondary">عن سِيادَة</Link>
                         </div>
                     </motion.div>
                 </div>
-            </section>
+            </section >
 
             {/* Services */}
-            <section className="page-section" style={{ background: 'var(--bg-paper)', borderTop: '1px solid var(--border)' }}>
+            < section className="page-section" style={{ background: 'var(--bg-paper)', borderTop: '1px solid var(--border)' }
+            }>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '80px' }}>
                         <div className="badge">حلول متكاملة</div>
@@ -62,8 +62,8 @@ export default function Home() {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section >
 
-        </div>
+        </div >
     )
 }

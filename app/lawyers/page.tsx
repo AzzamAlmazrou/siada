@@ -17,7 +17,8 @@ const lawyersDataset = [
         ],
         bio: 'خبير في هيكلة الشركات السعودية الكبرى ومعالجة النزاعات التجارية المعقدة. يمتلك خبرة واسعة في الأنظمة التجارية وقوانين الاستثمار الأجنبي في المملكة.',
         img: '👨‍💼',
-        loc: 'الرياض'
+        loc: 'الموقع: الرياض',
+        isBusy: false
     },
     {
         id: 2,
@@ -32,7 +33,8 @@ const lawyersDataset = [
         ],
         bio: 'متخصصة في قضايا الأسرة والتركات، وتقديم الاستشارات الشرعية الدقيقة. تتميز بقدرة عالية على حل النزاعات ودياً قبل اللجوء للمحاكم.',
         img: '👩‍💼',
-        loc: 'جدة'
+        loc: 'الموقع: جدة',
+        isBusy: true
     },
     {
         id: 3,
@@ -47,7 +49,8 @@ const lawyersDataset = [
         ],
         bio: 'مستشار سابق في عدة جهات حكومية، وخبير في القضايا الجنائية الكبرى والقضايا الإدارية أمام ديوان المظالم.',
         img: '👨‍⚖️',
-        loc: 'الخبر'
+        loc: 'الموقع: الرياض',
+        isBusy: false
     },
     {
         id: 4,
@@ -62,7 +65,8 @@ const lawyersDataset = [
         ],
         bio: 'رائدة في قانون التجارة الإلكترونية وحماية العلامات التجارية في المملكة. تعمل كحلقة وصل بين التقنيين والقانونيين لضمان الامتثال.',
         img: '👩‍🔬',
-        loc: 'الرياض'
+        loc: 'الموقع: الرياض',
+        isBusy: false
     },
     {
         id: 5,
@@ -77,7 +81,8 @@ const lawyersDataset = [
         ],
         bio: 'متخصص في حوكمة الموارد البشرية وحل النزاعات بين أصحاب العمل والموظفين. لديه خبرة عميقة في صياغة لوائح العمل الداخلية.',
         img: '👨‍💼',
-        loc: 'مكة المكرمة'
+        loc: 'الموقع: مكة المكرمة',
+        isBusy: false
     },
     {
         id: 6,
@@ -92,7 +97,8 @@ const lawyersDataset = [
         ],
         bio: 'خبيرة في معاهدات الاستثمار الدولية وحماية الاستثمارات العابرة للحدود. تمتلك مهارات تفاوض عالية باللغتين العربية والإنجليزية.',
         img: '👩‍💼',
-        loc: 'الرياض'
+        loc: 'الموقع: الرياض',
+        isBusy: true
     },
     {
         id: 7,
@@ -107,7 +113,8 @@ const lawyersDataset = [
         ],
         bio: 'قائد في مجال التحكيم التجاري، يسعى دائماً لتقليل الاعتماد على التقاضي التقليدي عبر أساليب التسوية المبتكرة.',
         img: '👨‍⚖️',
-        loc: 'جدة'
+        loc: 'الموقع: جدة',
+        isBusy: false
     },
     {
         id: 8,
@@ -122,7 +129,8 @@ const lawyersDataset = [
         ],
         bio: 'يجمع بين الفهم التقني العميق والنظرة القانونية الصلبة لمواجهة التحديات القانونية في العالم الرقمي.',
         img: '👨‍💻',
-        loc: 'الدمام'
+        loc: 'الموقع: الدمام',
+        isBusy: false
     },
     {
         id: 9,
@@ -137,7 +145,8 @@ const lawyersDataset = [
         ],
         bio: 'مرجع قانوني في قضايا العقار الكبرى وتطوير الأراضي، ولديها خبرة واسعة في التعامل مع الصناديق العقارية والاستثمارية.',
         img: '👩‍💼',
-        loc: 'الرياض'
+        loc: 'الموقع: الرياض',
+        isBusy: false
     },
     {
         id: 10,
@@ -152,7 +161,8 @@ const lawyersDataset = [
         ],
         bio: 'متخصص في القوانين الرياضية الحديثة، ومواكبة الحراك الرياضي الكبير في المملكة وتطوير لوائح الأندية.',
         img: '⚽',
-        loc: 'الرياض'
+        loc: 'الموقع: الرياض',
+        isBusy: false
     },
     {
         id: 11,
@@ -167,7 +177,8 @@ const lawyersDataset = [
         ],
         bio: 'تتميز بدقة التحليل القانوني في قضايا التأمين وإيجاد حلول عادلة تضمن حقوق كافة الأطراف في النزاعات المعقدة.',
         img: '👩‍⚕️',
-        loc: 'جدة'
+        loc: 'الموقع: جدة',
+        isBusy: false
     },
     {
         id: 12,
@@ -182,7 +193,8 @@ const lawyersDataset = [
         ],
         bio: 'خبير في التعامل مع القضايا الضريبية والزكوية أمام اللجان المختصة، مع فهم عميق للتحولات الضريبية في المملكة.',
         img: '📊',
-        loc: 'المنطقة الشرقية'
+        loc: 'الموقع: الرياض',
+        isBusy: true
     },
     {
         id: 13,
@@ -197,7 +209,8 @@ const lawyersDataset = [
         ],
         bio: 'متخصص في هندسة العقود التمويلية وضمان امتثالها للأنظمة المالية الحديثة ومعايير التمويل الإسلامي العالمية.',
         img: '🏦',
-        loc: 'الرياض'
+        loc: 'الموقع: الرياض',
+        isBusy: false
     }
 ]
 
@@ -214,7 +227,7 @@ export default function LawyersPage() {
                 <div style={{ textAlign: 'center', marginBottom: '80px' }}>
                     <div className="badge">دليل الخبراء سِيادَة (١٣ خبيراً)</div>
                     <h1 className="section-title serif-title">نخبة المحامين والمستشارين</h1>
-                    <p className="section-subtitle" style={{ margin: '0 auto' }}>تواصل مباشر مع كفاءات شرعية وقانونية في كافة التخصصات الحديثة (نموذج عرض تقني).</p>
+                    <p className="section-subtitle" style={{ margin: '0 auto' }}>تواصل مباشر مع كفاءات شرعية وقانونية في كافة التخصصات الحديثة.</p>
                 </div>
 
                 <div className={styles.lawyerGrid}>
@@ -226,7 +239,6 @@ export default function LawyersPage() {
                             onClick={() => setSelectedLawyer(l)}
                         >
                             <div className={styles.cardHeader}>
-                                <div className={styles.statusDot}></div>
                                 <span className={styles.locationTag}>{l.loc}</span>
                             </div>
                             <div className={styles.avatar}>{l.img}</div>
@@ -298,7 +310,15 @@ export default function LawyersPage() {
                                 </div>
 
                                 <div className={styles.modalActions}>
-                                    <button className="btn-primary" style={{ flex: 1, justifyContent: 'center' }} onClick={handleAction}>طلب استشارة فورية 📞</button>
+                                    {selectedLawyer.isBusy ? (
+                                        <button className="btn-primary" style={{ flex: 1, justifyContent: 'center', opacity: 0.6, cursor: 'not-allowed' }} disabled>
+                                            المحامي مشغول حالياً ⚠️
+                                        </button>
+                                    ) : (
+                                        <button className="btn-primary" style={{ flex: 1, justifyContent: 'center' }} onClick={handleAction}>
+                                            طلب استشارة فورية 📞
+                                        </button>
+                                    )}
                                     <button className="btn-secondary" style={{ flex: 1, justifyContent: 'center' }} onClick={handleAction}>حجز موعد 🗓️</button>
                                 </div>
                             </motion.div>

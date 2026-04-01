@@ -3,22 +3,25 @@
 :root {
   /* ── Modern Premium Palette ── */
   --brand-ink: #4A5561;
-  /* Deep Blue-Gray */
   --bg-paper: #F0F0EB;
-  /* Aged Paper / Warm White */
   --bg-white: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-primary: #F7F7F4;
 
   /* ── Functional ── */
   --primary: var(--brand-ink);
+  --primary-dark: #2C3E50;
   --primary-light: #64748B;
   --primary-pale: rgba(74, 85, 97, 0.05);
+  --primary-glow: rgba(74, 85, 97, 0.15);
 
   /* ── Accent ── */
   --accent: #2C3E50;
   --emerald: #34495E;
-  /* Muted Professional Slate */
   --border: rgba(74, 85, 97, 0.12);
   --border-dark: rgba(74, 85, 97, 0.25);
+  --border-subtle: rgba(74, 85, 97, 0.08);
+  --border-default: rgba(74, 85, 97, 0.15);
 
   /* ── Text ── */
   --text-primary: #1A202C;
@@ -27,34 +30,70 @@
 
   /* ── Layout ── */
   --navbar-height: 80px;
+  --radius-xs: 6px;
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 24px;
 
-  /* ── Shadows (Softer & More Modern) ── */
+  /* ── Shadows ── */
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.02);
   --shadow-lg: 0 20px 40px rgba(74, 85, 97, 0.08);
+  --shadow-primary: 0 4px 14px rgba(74, 85, 97, 0.25);
 
   /* ── Misc ── */
   --transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* ── Dark Mode ── */
 .dark {
-  --brand-ink: #A0AEC0;
+  --brand-ink: #94A3B8;
   --bg-paper: #0F172A;
-  /* كحلي فاخر بدلاً من الأسود */
   --bg-white: #1E293B;
-  /* رمادي أزرق مريح */
-  --text-primary: #F0F9FF;
-  /* أبيض زرقي ناصع */
+  --bg-card: #1E293B;
+  --bg-primary: #162032;
+  --primary: #94A3B8;
+  --primary-dark: #CBD5E1;
+  --primary-light: #CBD5E1;
+  --primary-pale: rgba(148, 163, 184, 0.1);
+  --primary-glow: rgba(148, 163, 184, 0.2);
+  --text-primary: #F1F5F9;
   --text-secondary: #CBD5E1;
   --text-muted: #94A3B8;
-  --border: rgba(255, 255, 255, 0.08);
-  --border-dark: rgba(255, 255, 255, 0.15);
+  --border: rgba(255, 255, 255, 0.1);
+  --border-dark: rgba(255, 255, 255, 0.2);
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-default: rgba(255, 255, 255, 0.12);
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.6);
+  --shadow-primary: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Dark Mode: fix footer ── */
+.dark footer {
+  background: #0B1120 !important;
+}
+
+/* ── Dark Mode: fix card backgrounds ── */
+.dark .card {
+  background: #1E293B !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #F1F5F9 !important;
+}
+
+/* ── Dark Mode: fix inputs ── */
+.dark input,
+.dark select,
+.dark textarea {
+  background: #162032 !important;
+  color: #F1F5F9 !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #64748B !important;
 }
 
 *,
@@ -134,6 +173,9 @@ body {
   cursor: pointer;
   text-decoration: none;
   box-shadow: 0 4px 14px rgba(74, 85, 97, 0.2);
+  font-family: inherit;
+  font-size: 1rem;
+  white-space: nowrap;
 }
 
 .btn-primary:hover {
@@ -155,6 +197,9 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  white-space: nowrap;
 }
 
 .btn-secondary:hover {
@@ -169,15 +214,16 @@ body {
 }
 
 .section-title {
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
   font-weight: 800;
   margin-bottom: 24px;
   color: var(--brand-ink);
   letter-spacing: -1px;
+  line-height: 1.2;
 }
 
 .section-subtitle {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--text-secondary);
   max-width: 700px;
   margin-bottom: 56px;
@@ -197,13 +243,52 @@ body {
   margin-bottom: 24px;
 }
 
-@media (max-width: 768px) {
+/* ── Responsive: Tablet ── */
+@media (max-width: 1024px) {
   .container {
-    padding: 0 20px;
+    padding: 0 24px;
   }
 
   .page-section {
-    padding: 80px 0;
+    padding: 100px 0;
+  }
+}
+
+/* ── Responsive: Mobile ── */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .page-section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    letter-spacing: -0.5px;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  .card {
+    padding: 24px 20px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 14px 24px;
+    font-size: 0.95rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .badge {
+    font-size: 0.78rem;
+    padding: 6px 14px;
   }
 }
 
